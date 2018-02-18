@@ -1,0 +1,162 @@
+/* Define Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #26b9d0;
+}
+
+.rating_above {
+  /* font-size: 25px; */
+  height: 25px;
+  margin-left: 5%;
+  /* position: relative; */
+  /* font: "Ar"; */
+  font-size: 22px;
+  /* width: auto; */
+
+  text-align: left;
+}
+
+
+.rating_dropdown {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+
+
+.textbox {
+  font-size: 22px;
+  width: 80%;
+  height: 25px;
+  margin-bottom: 20px;
+  position: relative;
+  left: 30px;
+  padding-left: 15px;
+  transition: 0.5s;
+}
+
+
+.textbox_num {
+  font-size: 22px;
+  width: 39%;
+  height: 25px;
+  margin-bottom: 20px;
+  position: relative;
+  left: 30px;
+  padding-left: 15px;
+  transition: 0.5s;
+}
+
+
+/* Add padding to container elements */
+.container {
+
+    padding: 30px;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+
+.btnSubmit {
+  font-size: 20px;
+  background-color: #1074d7;
+  color: white;
+  border: none;
+  padding: 10px 32px;
+  margin-left: 40%;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btnSubmit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  /* margin-left: 50%; */
+  transition: 0.5s;
+
+}
+
+.btnSubmit span:after {
+  content: ' \2000 \00bb \2000 \00bb \2000 \00bb \2000 \00bb \2000 \00bb \2000 \00bb \2000 \00bb \2000 \00bb \2000 \00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -250px;
+  transition: 0.5s;
+  margin-left: 10%;
+  }
+
+.btnSubmit:hover span {
+  padding-right: 220px;
+}
+
+
+.btnSubmit:hover span:after {
+  opacity: 1;
+  right: 0;
+
+}
+
+.file {
+  margin-left: 30px;
+  font-size: 20px;
+
+}
+
+/* The Modal (background) */
+.modal {
+    /* z-index: 1; /* Sit on top */ */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 50px;
+    transition: 0.5s;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    right:0;
+    background-color: #cccccc;
+    margin: 20% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    transition:  0.5s;
+    right:0;
+    border-radius: 80px;
+}
+
+
+html {
+  background: url(../images/background.jpeg) no-repeat center center fixed;
+  background-size: cover;
+
+
+}

@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width"  initial-scale=1 />
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pete's Pet Shop</title>
+    <title>Smart Mortgage</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/smart_mortgage_style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,40 +20,34 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">Pete's Pet Shop</h1>
-          <hr/>
-          <br/>
-        </div>
-      </div>
+    <div class="modal">
+      <form = class="modal-content" style="background-color:rgba(215, 233, 248, 0.9)"  >
 
-      <div id="petsRow" class="row">
-        <!-- PETS LOAD HERE -->
-      </div>
+      <div class="container">
+      <h1 align="middle">
+          Let's Create a Smart Mortgage!
+      </h1>
+      <!-- <p>Please fill out your details in the form below </p> -->
+      <input class= "textbox" type="text" name= "seller" placeholder="Address of seller"  >
+      <br>
+      <input class="textbox" type="text" name= "buyer" placeholder="Address of buyer"  >
+      <br>
+      <input class="textbox" type="number" name="down_payment" placeholder="Amount in Down Payment" >
+      <br>
+      <input class="textbox" type="number" name="monthly_payment" placeholder="Monthly Payment" >
+      <br>
+      <input class="textbox" type="number" name="number_of_months" placeholder="Number of Months" >
+      <br>
+      <button class="btnSubmit"><span> Create Now </span></button>
+      <br>
     </div>
 
-    <div id="petTemplate" style="display: none;">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="panel panel-default panel-pet">
-          <div class="panel-heading">
-            <h3 class="panel-title">Scrappy</h3>
-          </div>
-          <div class="panel-body">
-            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
-            <br/><br/>
-            <strong>Breed</strong>: <span class="pet-breed">Golden Retriever</span><br/>
-            <strong>Age</strong>: <span class="pet-age">3</span><br/>
-            <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br/><br/>
-            <button class="btn btn-default btn-adopt" type="button" data-id="0">Adopt</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  </form>
+</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/web3.min.js"></script>
