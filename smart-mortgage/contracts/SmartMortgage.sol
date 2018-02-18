@@ -73,6 +73,12 @@ contract SmartMortgage {
         return securityBalance[msg.sender];
     }
 
+    //Check dollar Balance
+    function viewDollarBalance() returns (uint256) {
+
+        return dollarBalances[msg.sender];
+    }
+
 
 
     //Contract can be terminated by the entity owning 100% of the security tokens by
