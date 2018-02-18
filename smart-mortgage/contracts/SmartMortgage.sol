@@ -21,6 +21,8 @@ contract SmartMortgage {
     //31 days x 24 hrs x 60 mins x 60 seconds = 2678400
     uint256 secondsPerMonth = 2678400;
 
+    uint lastPaymentTime;
+
     //Next payment period
     uint blockHeight_nextEval;
 
@@ -81,6 +83,7 @@ contract SmartMortgage {
 
 
 
+
     //Contract can be terminated by the entity owning 100% of the security tokens by
     //transfering them to an Address other than the buyer and seller.
 
@@ -99,6 +102,15 @@ contract SmartMortgage {
 
 
 //-------------------------- Methods for Seller
+
+
+    //This function verfies that a payment has been missed by the buyer and increments
+    // the consecutivePaymentFailures counter.
+    function verifyMissedPayment() returns (bool) {
+      assert(msg.sender == seller);
+      assert((block.timestamp - lastPaymentTime) > secondsPerMonth);
+      consecutivePaymentFailures += 1;
+    }
 
     //Claim collateral for a failed payment
     function claimCollateral () {
@@ -142,6 +154,7 @@ contract SmartMortgage {
             DAI.transfer(seller, monthlyPayment);
             consecutivePaymentFailures = 0;
             blockHeight_nextEval += secondsPerMonth;
+            lastPaymentTime = block.timestamp;
 
             return true;
         } else {
